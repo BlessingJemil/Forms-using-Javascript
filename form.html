@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .d{
+            display: flex;
+           
+            
+            margin-left: 15%;
+            margin-top: 3%;
+            margin-right: 15%;
+            border-radius: 8px;
+            box-shadow: 2px 2px rgb(89, 89, 89);
+
+        }
+        .s{
+            margin-left: 10%;
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+            padding-top: 3%;
+        }
+        button{
+            border: none;
+            margin-left: -20px;
+            background-color: bisque;
+            font-size: 18px;
+            padding: 15px 40px 15px 20px;
+        
+            
+            
+            
+        }
+        button:hover{
+            transform: scale(1.1,1.1);
+            background-color: white;
+        }
+        i{
+            padding-right: 10px;
+        }
+        .d1{
+            margin-right: 10%;
+            margin-left: 0%;
+            background-color: bisque;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            padding-left: 2%;
+            border-radius: 8px;
+           
+        }
+        .b1{
+            padding: 20px 65px 15px 60px;
+        }
+        .b2{
+            padding: 20px 75px 15px 60px;
+        }
+        .b3{
+            padding: 20px 95px 15px 60px;
+        }
+        .b4{
+            padding: 20px 95px 15px 60px;
+        }
+        .b5{
+            padding: 20px 90px 15px 60px;
+        }
+        .b6{
+            padding: 20px 100px 15px 60px;
+        }
+        .b7{
+            padding: 20px 35px 15px 60px;
+        }
+        .s2{
+            background-color: white;
+            padding: 15%;
+            padding-right: 200px;
+            margin-top: 10%;
+           
+            border-radius: 8px;
+            display: none;
+        }
+        input{
+            padding: 10%;
+            margin: 2%;
+            margin-bottom: -25px;
+        }
+        h3{
+            font-size: 21px;
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+        .a{
+            background-color: white;
+            padding: 7%;
+            padding-right: 90px;
+            border-radius: 8px;
+            margin-top: 10%;
+            display: none;
+        }
+       table,tr,td{
+        padding: 10%;
+       }
+       
+        
+        
+    </style>
+    <body>
+        <h1>Personal Details</h1>
+        <div class="d">
+        <div class="d1">
+            <button class="b1" onclick="name1()"><i class="fa fa-user-circle"></i>User Name</button>
+            <br>
+            <button class="b2" onclick="pass()"><i class="fa fa-key"></i>Passcode</button>
+            <br>
+            <button class="b3" onclick="gen()"><i class="fa fa-check-circle"></i>Gender</button>
+            <br>
+            <button class="b4" onclick="select()"><i class="fa fa-check-square"></i>Interest</button>
+            <br>
+            <button class="b5" onclick="addr()"><i class="fa fa-address-book"></i>Address</button>
+            <br>
+            <button class="b6" onclick="mail()"><i class="fa fa-envelope"></i>Mail id</button>
+            <br>
+            <button class="b7" onclick="mobile()"><i class="fa fa-mobile-alt"></i>Mobile Number</button>
+            <br>
+
+
+        </div>
+        <div class="s">
+        <p id="s" class="s2"></p>
+        <p id="a" class="a"></p>
+        
+    </div>
+    </div>
+    </body>
+    <script>
+        function name1(){
+            
+            let a="<h3>Name</h3>";
+            a=a+"<input type=text>";
+            document.getElementById("a").style.display="none";
+            document.getElementById("s").style.display="block";
+            document.getElementById("s").innerHTML=a;
+            console.log(a);
+        }
+        function pass(){
+            let a="<h3>Passcode</h3>";
+            a=a+"<input type=password>";
+            document.getElementById("a").style.display="none";
+            document.getElementById("s").style.display="block";
+            document.getElementById("s").innerHTML=a;
+            console.log(a);
+        }
+        function gen(){
+            let a="<h3>Gender</h3>";
+            a=a+"<table>";
+                a=a+"<tr>";
+                    a=a+"<td><input type=radio value=male></td>";
+                    a=a+"<td><p>Male</p></td>";
+                    a=a+"</tr>";
+                    a=a+"<tr>";
+                    a=a+"<td><input type=radio value=female></td>";
+                    a=a+"<td><p>Female</p></td>";
+            a=a+"</tr>";
+            a=a+"</table>";
+            document.getElementById("a").style.display="none";
+            document.getElementById("s").style.display="block";
+            document.getElementById("s").innerHTML=a;
+            console.log(a);
+        }
+        function select(){
+            let a1="Listening Music";
+            let a="<h3>Interest</h3>";
+            a=a+"<table>";
+                a=a+"<tr>";
+                    a=a+"<td><input type=checkbox></td>";
+                    a=a+"<td><p>"+a1+"</p></td>";
+                    a=a+"</tr>";
+                    a=a+"<tr>";
+                    a=a+"<td><input type=checkbox></td>";
+                    a=a+"<td><p>Reading Books</p></td>";
+            a=a+"</tr>";
+            a=a+"<tr>";
+                    a=a+"<td><input type=checkbox></td>";
+                    a=a+"<td><p>Exploring</p></td>";
+            a=a+"</tr>";
+            a=a+"<tr>";
+                    a=a+"<td><input type=checkbox></td>";
+                    a=a+"<td><p>Playing</p></td>";
+            a=a+"</tr>";
+            a=a+"</table>";
+            document.getElementById("a").style.display="none";
+            document.getElementById("s").style.display="block";
+            document.getElementById("s").innerHTML=a;
+            console.log(a);
+        }
+        function addr(){
+            let a="<h3>Address</h3>";
+            a=a+"<textarea type=text cols=40 rows=10></textarea>";
+            document.getElementById("s").style.display="none";
+            document.getElementById("a").style.display="block";
+            document.getElementById("a").innerHTML=a;
+            console.log(a);
+        }
+        function mail(){
+            let a="<h3>Mail Id</h3>";
+            a=a+"<input type=email>";
+            document.getElementById("a").style.display="none";
+            document.getElementById("s").style.display="block";
+            document.getElementById("s").innerHTML=a;
+            console.log(a);
+        }
+        function mobile(){
+            let a="<h3>Mobile Number</h3>";
+            a=a+"<input type=number>";
+            document.getElementById("a").style.display="none";
+            document.getElementById("s").style.display="block";
+            document.getElementById("s").innerHTML=a;
+            console.log(a);
+        }
+    </script>
+</html>
